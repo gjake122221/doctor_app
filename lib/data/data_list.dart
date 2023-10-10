@@ -35,22 +35,54 @@ var doctors = [
   },
 ];
 
-List<Widget> btnicons = [
-  Image.asset('assets/icons/007_stethoscope.png'),
-  Image.asset('assets/icons/004_teeth.png'),
-  Image.asset('assets/icons/017_heart.png'),
-  Image.asset('assets/icons/024_clinic.png'),
-  Image.asset('assets/icons/012_medicine.png'),
-  Image.asset('assets/icons/013_care_2.png'),
-  Image.asset('assets/icons/028_bandage.png'),
-  Image.asset('assets/icons/005_syringe.png'),
+var btnicons = [
+  {
+    'img': 'assets/icons/007_stethoscope.png',
+    'title': 'Consultation',
+    'color': '0xFF4485FD',
+  },
+  {
+    'img': 'assets/icons/004_teeth.png',
+    'title': 'Dental',
+    'color': '0xFFA584FF',
+  },
+  {
+    'img': 'assets/icons/017_heart.png',
+    'title': 'Heart',
+    'color': '0xFFFF7854',
+  },
+  {
+    'img': 'assets/icons/024_clinic.png',
+    'title': 'Hospitals',
+    'color': '0xFFFEA725',
+  },
+  {
+    'img': 'assets/icons/012_medicine.png',
+    'title': 'Medicines',
+    'color': '0xFF00CC6A',
+  },
+  {
+    'img': 'assets/icons/013_care_2.png',
+    'title': 'Physician',
+    'color': '0xFF00C9E4',
+  },
+  {
+    'img': 'assets/icons/028_bandage.png',
+    'title': 'Skin',
+    'color': '0xFFFD44B3',
+  },
+  {
+    'img': 'assets/icons/005_syringe.png',
+    'title': 'Surgeon',
+    'color': '0xFFFD4444',
+  },
 ];
 
-List<Widget> othericons = [
-  Image.asset('assets/icons/Icons_Artboard.png'),
-  Image.asset('assets/icons/Icons_Back.png'),
-  Image.asset('assets/icons/Icons_Comment.png'),
-  Image.asset('assets/icons/Icons_Menu_Burger.png'),
-  Image.asset('assets/icons/Icons_Star.png'),
-  Image.asset('assets/icons/Search.png'),
+var othericons = [
+  {'Icons_Artboard': Image.asset('assets/icons/Icons_Artboard.png')},
+  {'Icons_Back': Image.asset('assets/icons/Icons_Back.png')},
+  {'Icons_Comment': Image.asset('assets/icons/Icons_Comment.png')},
+  {'Icons_Menu_Burger': Image.asset('assets/icons/Icons_Menu_Burger.png')},
+  {'Icons_Star': Image.asset('assets/icons/Icons_Star.png')},
+  {'Search': Image.asset('assets/icons/Search.png')},
 ];

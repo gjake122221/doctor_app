@@ -15,6 +15,7 @@ class MainApp extends StatelessWidget {
         title: 'Find Your Doctor',
         theme: ThemeData(
           brightness: Brightness.light,
+          fontFamily: 'Lato',
         ),
         debugShowCheckedModeBanner: false,
         home: HomePage(),

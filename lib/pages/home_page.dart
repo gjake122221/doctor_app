@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 
 import '../data/data_list.dart';
 
@@ -21,7 +22,7 @@ class HomePage extends StatelessWidget {
                   trailing: CircleAvatar(
                       backgroundImage: AssetImage('assets/image/Group_22.png')),
                 ),
-              ),
+              ).animate().fade(delay: 200.ms).slideX(),
               SizedBox(
                 width: widthof,
                 height: 100,
@@ -46,11 +47,16 @@ class HomePage extends StatelessWidget {
                           ],
                         ),
                       ),
-                      TextFormField(),
+                      SizedBox(
+                        width: widthof,
+                        height: 49,
+                        child:
+                            SearchBar(elevation: MaterialStatePropertyAll(5.0)),
+                      ),
                     ],
                   ),
                 ),
-              ),
+              ).animate().fade(delay: 400.ms).slideX(),
               SizedBox(
                 width: widthof,
                 height: 200,
@@ -59,7 +65,7 @@ class HomePage extends StatelessWidget {
                   crossAxisCount: 4,
                   children: gridChildren,
                 ),
-              ),
+              ).animate().fade(delay: 600.ms).slideX(),
               SizedBox(
                 width: widthof,
                 height: 326,
@@ -83,7 +89,7 @@ class HomePage extends StatelessWidget {
                     ),
                   ],
                 ),
-              ),
+              ).animate().fade(delay: 800.ms).slideX(),
             ],
           ),
         ),
@@ -94,41 +100,40 @@ class HomePage extends StatelessWidget {
 
 var gridChildren = List.generate(
   8,
-  (index) {
-    return SizedBox(
-      child: Center(
-        child: Padding(
-          padding: const EdgeInsets.all(4.0),
-          child: Column(children: [
-            SizedBox(
-              width: 50,
-              height: 50,
-              child: Card(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10.0),
+  (index) => SizedBox(
+    child: Center(
+      child: Padding(
+        padding: const EdgeInsets.all(4.0),
+        child: Column(children: [
+          SizedBox(
+            width: 50,
+            height: 50,
+            child: Card(
+              elevation: 5,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10.0),
+              ),
+              color: Color(int.parse(btnicons[index]['color'].toString())),
+              child: IconButton(
+                icon: Image.asset(
+                  btnicons[index]['img'].toString(),
+                  color: Colors.white,
                 ),
-                color: Color(int.parse(btnicons[index]['color'].toString())),
-                child: IconButton(
-                  icon: Image.asset(
-                    btnicons[index]['img'].toString(),
-                    color: Colors.white,
-                  ),
-                  onPressed: () => 'hello',
-                ),
+                onPressed: () => 'hello',
               ),
             ),
-            Padding(
-              padding: EdgeInsets.only(top: 6.0),
-              child: Text(
-                btnicons[index]['title'].toString(),
-                style: TextStyle(
-                  fontSize: 12,
-                ),
+          ),
+          Padding(
+            padding: EdgeInsets.only(top: 6.0),
+            child: Text(
+              btnicons[index]['title'].toString(),
+              style: TextStyle(
+                fontSize: 12,
               ),
             ),
-          ]),
-        ),
+          ),
+        ]),
       ),
-    );
-  },
+    ),
+  ),
 );

@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-
 var doctors = [
   {
     'name': 'Selma Sigi',
@@ -78,11 +76,11 @@ var btnicons = [
   },
 ];
 
-var othericons = [
-  {'Icons_Artboard': Image.asset('assets/icons/Icons_Artboard.png')},
-  {'Icons_Back': Image.asset('assets/icons/Icons_Back.png')},
-  {'Icons_Comment': Image.asset('assets/icons/Icons_Comment.png')},
-  {'Icons_Menu_Burger': Image.asset('assets/icons/Icons_Menu_Burger.png')},
-  {'Icons_Star': Image.asset('assets/icons/Icons_Star.png')},
-  {'Search': Image.asset('assets/icons/Search.png')},
-];
+var othericons = {
+  'Icons_Artboard': 'assets/icons/Icons_Artboard.png',
+  'Icons_Back': 'assets/icons/Icons_Back.png',
+  'Icons_Comment': 'assets/icons/Icons_Comment.png',
+  'Icons_Menu_Burger': 'assets/icons/Icons_Menu_Burger.png',
+  'Icons_Star': 'assets/icons/Icons_Star.png',
+  'Search': 'assets/icons/Search.png',
+};

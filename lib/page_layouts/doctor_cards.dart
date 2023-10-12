@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../data/data_list.dart';
+import '../pages/pages.dart';
 
 class DoctorCards extends StatelessWidget {
   DoctorCards(this.doctorObject, this.ndx, this.otherIcons);
@@ -30,8 +31,19 @@ class DoctorCards extends StatelessWidget {
           ],
         ),
         isThreeLine: true,
-        trailing: Text('open'),
-        onTap: () => '',
+        trailing: Container(
+            width: 50,
+            color: Color(0xffCCF5E1),
+            child: Padding(
+              padding: EdgeInsets.all(4.0),
+              child: Text('open', textAlign: TextAlign.center),
+            )),
+        onTap: () => Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (_) => newPage[ndx],
+          ),
+        ),
       ),
     );
   }
